@@ -15,21 +15,6 @@
             <p>GitHub: <a href="https://github.com/J3ffers0n02">J3ffers0n02</a></p>
         </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('/sidebar.html')
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById('sidebar-container').innerHTML = html;
-                    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-                    document.querySelectorAll('#sidebar-container .sidebar ul li a').forEach(link => {
-                        if (link.getAttribute('href') === currentPage) {
-                            link.classList.add('active');
-                        }
-                    });
-                })
-                .catch(error => console.error('Error loading sidebar:', error));
-        });
-    </script>
+    <script src="/sidebar.js"></script>
 </body>
 </html>
