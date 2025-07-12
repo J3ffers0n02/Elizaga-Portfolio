@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects | Mark Jefferson Elizaga</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="sidebar">
-        <h2>My Portfolio</h2>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-
+    <div id="sidebar-container"></div>
     <div class="main-content">
         <h1>Projects</h1>
+        <h2 id="4th-year">4th Year</h2>
         <ul>
             <li>Flood Management App using GIS + Flutter</li>
-            <li>Training Tracker Map App (with Supabase)</li>
+            <li>Training Tracker Map App (Supabase)</li>
+        </ul>
+        <h2 id="3rd-year">3rd Year</h2>
+        <ul>
+            <li>Mobile App UI Clone (Flutter)</li>
+            <li>Database-Driven Web Tool</li>
+        </ul>
+        <h2 id="2nd-year">2nd Year</h2>
+        <ul>
+            <li>Basic CRUD in PHP + MySQL</li>
+            <li>Simple Calculator in Java</li>
+        </ul>
+        <h2 id="1st-year">1st Year</h2>
+        <ul>
+            <li>Personal Blog Static Site</li>
+            <li>HTML + CSS Portfolio v1</li>
         </ul>
     </div>
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('sidebar-container').innerHTML = html;
+                // Add active class based on current page
+                const currentPage = window.location.pathname.split('/').pop();
+                document.querySelectorAll('#sidebar-container .sidebar ul li a').forEach(link => {
+                    if (link.getAttribute('href') === currentPage) {
+                        link.classList.add('active');
+                    }
+                });
+            })
+            .catch(error => console.error('Error loading sidebar:', error));
+    </script>
 </body>
-
 </html>
