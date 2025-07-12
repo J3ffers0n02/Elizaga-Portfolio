@@ -9,15 +9,16 @@
 <body>
     <div id="sidebar-container"></div>
     <div class="main-content">
-        <h1>About Me</h1>
-        <p>I’m a developer focused on smart technologies and flood mapping solutions.</p>
+        <div class="content-container">
+            <h1>About Me</h1>
+            <p>I’m a developer focused on smart technologies and flood mapping solutions.</p>
+        </div>
     </div>
     <script>
         fetch('sidebar.html')
             .then(response => response.text())
             .then(html => {
                 document.getElementById('sidebar-container').innerHTML = html;
-                // Add active class based on current page
                 const currentPage = window.location.pathname.split('/').pop();
                 document.querySelectorAll('#sidebar-container .sidebar ul li a').forEach(link => {
                     if (link.getAttribute('href') === currentPage) {

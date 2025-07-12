@@ -9,33 +9,37 @@
 <body>
     <div id="sidebar-container"></div>
     <div class="main-content">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hello! I'm Mark Jefferson Elizaga, a developer with a focus on modern technologies like Flutter, Supabase, and GIS-based solutions.</p>
-        <h2>Recent Projects</h2>
-        <ul>
-            <li>Flood Management App – GIS-based alert system using Flutter & Cloud integration</li>
-            <li>Training Tracker Map App – Map + filter interface with Supabase backend</li>
-            <li>UI Clone Challenge – Mobile-first recreation of popular app UIs</li>
-        </ul>
-        <h2>Experience</h2>
-        <ul>
-            <li>On-the-Job Training (2025) – Assisted in development of real-time training tracking system with cloud integration</li>
-            <li>Research Assistant – Helped draft disaster risk systems paper for university capstone</li>
-        </ul>
-        <h2>Education</h2>
-        <ul>
-            <li>Bachelor of Science in Information Technology<br>XYZ University, 2021–2025<br>Focused electives: Mobile Development, Cloud Platforms, GIS Mapping</li>
-        </ul>
-        <h2>Contact Info</h2>
-        <p>Email: <a href="mailto:mjelizaga13@gmail.com">mjelizaga13@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/J3ffers0n02">J3ffers0n02</a></p>
+        <div class="content-container">
+            <div class="profile-header">
+                <h1>Mark Jefferson Elizaga</h1>
+                <p class="location">Cavite, Philippines</p>
+                <p class="description">I'm a Fresh Grad Full-Stack Developer. I focus on mobile development and web development. I create professional websites and organizational applications</p>
+            </div>
+            <h2>Recent Projects</h2>
+            <ul>
+                <li>Flood Management App – GIS-based alert system using Flutter & Cloud integration</li>
+                <li>Training Tracker Map App – Map + filter interface with Supabase backend</li>
+                <li>UI Clone Challenge – Mobile-first recreation of popular app UIs</li>
+            </ul>
+            <h2>Experience</h2>
+            <ul>
+                <li>On-the-Job Training (2025) – Assisted in development of real-time training tracking system with cloud integration</li>
+                <li>Research Assistant – Helped draft disaster risk systems paper for university capstone</li>
+            </ul>
+            <h2>Education</h2>
+            <ul>
+                <li>Bachelor of Science in Information Technology<br>XYZ University, 2021–2025<br>Focused electives: Mobile Development, Cloud Platforms, GIS Mapping</li>
+            </ul>
+            <h2>Contact Info</h2>
+            <p>Email: <a href="mailto:mjelizaga13@gmail.com">mjelizaga13@gmail.com</a></p>
+            <p>GitHub: <a href="https://github.com/J3ffers0n02">J3ffers0n02</a></p>
+        </div>
     </div>
     <script>
         fetch('sidebar.html')
             .then(response => response.text())
             .then(html => {
                 document.getElementById('sidebar-container').innerHTML = html;
-                // Add active class based on current page
                 const currentPage = window.location.pathname.split('/').pop();
                 document.querySelectorAll('#sidebar-container .sidebar ul li a').forEach(link => {
                     if (link.getAttribute('href') === currentPage) {

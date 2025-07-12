@@ -2,8 +2,8 @@ body {
   margin: 0;
   font-family: 'Arial', sans-serif;
   display: flex;
-  background-color: #f9fafb;
-  color: #1f2937;
+  background-color: #161616;
+  color: #ececec;
 }
 
 .sidebar {
@@ -78,7 +78,7 @@ body {
 .sidebar ul li a.active {
   color: #ffffff;
   background-color: #292929;
-  border: 2px solid #313131; /* Adds a 1px solid border with a dark gray color */
+  border: 2px solid #313131;
 }
 .sidebar .sub-links {
   margin-top: 0.5rem;
@@ -99,12 +99,21 @@ body {
   margin-left: 260px;
   padding: 2rem;
   flex: 1;
-  background-color: #ffffff;
+  background-color: #161616;
   min-height: 100vh;
+  overflow: hidden; /* Prevents main-content from scrolling independently */
+}
+
+.content-container {
+  max-width: 700px; /* iPad-like width */
+  margin: 0 auto; /* Centers the container with equal margins on both sides */
+  padding: 0 2rem; /* Large side padding for a spacious feel */
+  overflow-y: auto; /* Enables vertical scrolling if content overflows */
+  height: 100%; /* Ensures it takes full height of main-content */
 }
 
 h1, h2 {
-  color: #1e293b;
+  color: #ffffff;
 }
 
 h1 {
@@ -124,7 +133,7 @@ ul {
 }
 
 a {
-  color: #3b82f6;
+  color: #5f5f5f;
   text-decoration: none;
 }
 
