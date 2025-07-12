@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <div id="sidebar-container"></div>
@@ -15,18 +15,20 @@
         </div>
     </div>
     <script>
-        fetch('sidebar.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('sidebar-container').innerHTML = html;
-                const currentPage = window.location.pathname.split('/').pop();
-                document.querySelectorAll('#sidebar-container .sidebar ul li a').forEach(link => {
-                    if (link.getAttribute('href') === currentPage) {
-                        link.classList.add('active');
-                    }
-                });
-            })
-            .catch(error => console.error('Error loading sidebar:', error));
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('/sidebar.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('sidebar-container').innerHTML = html;
+                    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                    document.querySelectorAll('#sidebar-container .sidebar ul li a').forEach(link => {
+                        if (link.getAttribute('href') === currentPage) {
+                            link.classList.add('active');
+                        }
+                    });
+                })
+                .catch(error => console.error('Error loading sidebar:', error));
+        });
     </script>
 </body>
 </html>
