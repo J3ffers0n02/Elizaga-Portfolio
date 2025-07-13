@@ -33,26 +33,6 @@ body {
   /* Instead, use a block layout to stack sections vertically */
 }
 
-/* Style for individual cards (add this class to your HTML divs) */
-.card {
-  flex: 1 1 calc(50% - 1rem);
-  /* Each card takes ~50% width with gap adjustment */
-  background-color: #2a2a2a;
-  padding: 1.5rem;
-  border-radius: 8px;
-  min-width: 0;
-  /* Prevent flex items from overflowing */
-}
-
-.card h3 {
-  margin-top: 0;
-  color: #ffffff;
-}
-
-.card p {
-  color: #b0b0b0;
-}
-
 .preview-section,
 .projects-section,
 .education-section,
@@ -68,7 +48,7 @@ body {
 /* Recent Projects*/
 .recent-projects {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   padding-bottom: 1.5rem;
   background-color: transparent;
@@ -82,21 +62,22 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
   flex: 1;
-  max-width: 900px;
+  max-width: 500px;
   outline: 1px solid #313131;
   outline-offset: -1px;
-  margin-bottom: 1rem;
+  margin: 0.35rem;
 }
 
 .project-pic {
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: 250px;
+  object-fit: fill;
   display: block;
 }
 
 .project-content {
-  padding: 1rem;
+  margin-top: -1rem;
+  padding: .5rem;
 }
 
 
