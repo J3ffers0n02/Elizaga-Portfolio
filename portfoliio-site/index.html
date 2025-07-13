@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,39 +8,65 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="sidebar_elements/sidebar.css">
 </head>
+
 <body>
     <div id="sidebar-container"></div>
     <div class="main-content">
         <div class="centered-container">
+
+            <!-- Preview and description -->
             <div class="preview-section">
-                <div class="profile-info">  
-                    <h1>Hey, I'm Mark, <br> A <span class="highlight">Full-Stack Developer</span></h1>
+                <div class="profile-info">
+                    <h1>Hey, I'm Mark, <br> <span class="highlight"> A Full-Stack Developer</span></h1>
                     <p>Cavite, Philippines</p>
-                    <p>I'm a Fresh Grad Full-Stack Developer. I focus on mobile development and web development. I create professional websites and organizational applications</p>
+                    <p>I'm a Fresh Grad Full-Stack Developer. I focus on mobile development and web development.<br> I
+                        create professional websites and organizational applications</p>
                 </div>
             </div>
-            <h2>Recent Projects</h2>
-            <ul>
-                <li>Flood Management App – GIS-based alert system using Flutter & Cloud integration</li>
-                <li>Training Tracker Map App – Map + filter interface with Supabase backend</li>
-                <li>UI Clone Challenge – Mobile-first recreation of popular app UIs</li>
-            </ul>
-            <h2>Experience</h2>
-            <ul>
-                <li>On-the-Job Training (2025) – Assisted in development of real-time training tracking system with cloud integration</li>
-                <li>Research Assistant – Helped draft disaster risk systems paper for university capstone</li>
-            </ul>
-            <h2>Education</h2>
-            <ul>
-                <li>Bachelor of Science in Information Technology</li>
-                <li>XYZ University, 2021–2025</li>
-                <li>Focused electives: Mobile Development, Cloud Platforms, GIS Mapping</li>
-            </ul>
-            <h2>Contact Info</h2>
-            <p>Email: <a href="mailto:mjelizaga13@gmail.com">mjelizaga13@gmail.com</a></p>
-            <p>GitHub: <a href="https://github.com/J3ffers0n02">J3ffers0n02</a></p>
+
+            <!-- Recent Projects -->
+            <div class="projects-section">
+                <h2>Recent Projects</h2>
+                <div class="recent-projects">
+                    <div class="project-card">
+                        <img src="assets/images/Project1.png" alt="Project 1" class="project-pic">
+                        <div class="project-content">
+                            <h3 class="project-title">DOST-FPRDI Training Activities</h3>
+                            <p class="project-description"> Mapping done by DOST-FPRDI in the Philippines</p>
+                            <span class="project-category"> Mapping</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="assets/images/Project2.png" alt="Project 1" class="project-pic">
+                        <div class="project-content">
+                            <h3 class="project-title">San Cristobal Flood Management System</h3>
+                            <p class="project-description">Flood Management System for Brgy. San Cristobal</p>
+                            <span class="project-category">System</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Section Projects -->
+            <div class="education-section">
+                <h2>Education</h2>
+                <ul>
+                    <li>Bachelor of Science in Information Technology</li>
+                    <li>XYZ University, 2021–2025</li>
+                    <li>Focused electives: Mobile Development, Cloud Platforms, GIS Mapping</li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-section">
+                <h2>Contact Info</h2>
+                <p>Email: <a href="mailto:mjelizaga13@gmail.com">mjelizaga13@gmail.com</a></p>
+                <p>GitHub: <a href="https://github.com/J3ffers0n02">J3ffers0n02</a></p>
+            </div>
         </div>
     </div>
     <script src="sidebar_elements/sidebar.js"></script>
 </body>
+
 </html>

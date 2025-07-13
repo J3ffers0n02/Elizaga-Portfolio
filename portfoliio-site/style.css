@@ -1,6 +1,13 @@
+@font-face {
+  font-family: 'StudioSans';
+  src: url('assets/fonts/StudioSans.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'StudioSans', sans-serif;
   display: flex;
   background-color: #161616;
   color: #ececec;
@@ -17,23 +24,24 @@ body {
 }
 
 .centered-container {
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
   overflow-y: auto;
   height: fit-content;
-  display: flex; /* Use flexbox for side-by-side layout */
-  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
-  gap: 2rem; /* Space bet2en cards */
+  /* Remove display: flex and flex-wrap */
+  /* Instead, use a block layout to stack sections vertically */
 }
 
 /* Style for individual cards (add this class to your HTML divs) */
 .card {
-  flex: 1 1 calc(50% - 1rem); /* Each card takes ~50% width with gap adjustment */
+  flex: 1 1 calc(50% - 1rem);
+  /* Each card takes ~50% width with gap adjustment */
   background-color: #2a2a2a;
   padding: 1.5rem;
   border-radius: 8px;
-  min-width: 0; /* Prevent flex items from overflowing */
+  min-width: 0;
+  /* Prevent flex items from overflowing */
 }
 
 .card h3 {
@@ -45,20 +53,56 @@ body {
   color: #b0b0b0;
 }
 
-.preview-section {
+.preview-section,
+.projects-section,
+.education-section,
+.contact-section {
+  margin-bottom: 4rem;
+  /* Add space between sections */
+  background-color: transparent;
+  /* Optional: match card background */
+  border-radius: 8px;
+  /* Match card border radius */
+}
+
+/* Recent Projects*/
+.recent-projects {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 0.5rem;
-  padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   background-color: transparent;
   border-radius: 0.5rem;
+}
+
+.project-card {
+  background-color: #1C1C1C;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  flex: 1;
+  max-width: 900px;
+  outline: 1px solid #313131;
+  outline-offset: -1px;
+  margin-bottom: 1rem;
+}
+
+.project-pic {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.project-content {
+  padding: 1rem;
 }
 
 
 /* Styles the container for profile name and title, arranging them vertically */
 .profile-info {
   flex-direction: column;
-  padding: .5rem;
   font-family: sans-serif;
   color: #858585;
 }
@@ -73,13 +117,13 @@ h2 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.1rem;
   margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 1.5rem;
-  margin-top: 2rem;
+  font-size: 1.25rem;
+  margin-top: .2rem;
   margin-bottom: 1rem;
 }
 

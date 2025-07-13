@@ -1,0 +1,8 @@
+<div class="project-card">
+  <img src="assets/images/Project1.png" alt="Project Image" class="project-image">
+  <div class="project-content">
+    <h3 class="project-title"></h3>
+    <p class="project-description"></p>
+    <span class="project-category"></span>
+  </div>
+</div>
