@@ -6,118 +6,74 @@ body {
   color: #ececec;
 }
 
-.sidebar {
-  width: 250px;
-  background-color: #1b1b1b;
-  color: #ffffff;
-  height: 100vh;
-  padding: 1.5rem;
-  box-sizing: border-box;
-  position: fixed;
-  overflow-y: auto;
-}
-
-.profile-section {
-  display: flex;
-  align-items: center;
-  padding: 0.5rem;
-  background-color: #1b1b1b;
-  border-radius: 0.5rem;
-}
-
-.profile-pic {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  margin-right: 1rem;
-  object-fit: cover;
-}
-
-.profile-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.profile-name {
-  margin: 0;
-  font-size: 1rem;
-  color: #ffffff;
-}
-
-.profile-title {
-  margin: 0;
-  font-size: 0.7rem;
-  color: #ffffff;
-}
-
-.sidebar h2 {
-  font-size: 0.77rem;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-.sidebar ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.sidebar ul li {
-  margin: 0.3rem 0;
-}
-
-.sidebar ul li a {
-  color: #5f5f5f;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.95rem;
-  display: flex;
-  align-items: center;
-  padding: 0.5rem;
-  border-radius: 0.25rem;
-}
-.sidebar ul li a.active {
-  color: #ffffff;
-  background-color: #292929;
-  border: 2px solid #313131;
-}
-.sidebar .sub-links {
-  margin-top: 0.5rem;
-  margin-left: 1.2rem;
-  padding-left: 0;
-}
-
-.sidebar .sub-links li a {
-  padding: 0.3rem;
-  font-size: 0.9rem;
-}
-
-.sidebar .icon {
-  margin-right: 0.5rem;
-}
-
 .main-content {
   margin-left: 260px;
   padding: 2rem;
   flex: 1;
   background-color: #161616;
   min-height: 100vh;
-  overflow: hidden; /* Prevents main-content from scrolling independently */
+  overflow: hidden;
+  /* Prevents main-content from scrolling independently */
 }
 
-.content-container {
-  max-width: 700px; /* iPad-like width */
-  margin: 0 auto; /* Centers the container with equal margins on both sides */
-  padding: 0 2rem; /* Large side padding for a spacious feel */
-  overflow-y: auto; /* Enables vertical scrolling if content overflows */
-  height: 100%; /* Ensures it takes full height of main-content */
+.centered-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  overflow-y: auto;
+  height: fit-content;
+  display: flex; /* Use flexbox for side-by-side layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+  gap: 2rem; /* Space bet2en cards */
 }
 
-h1, h2 {
+/* Style for individual cards (add this class to your HTML divs) */
+.card {
+  flex: 1 1 calc(50% - 1rem); /* Each card takes ~50% width with gap adjustment */
+  background-color: #2a2a2a;
+  padding: 1.5rem;
+  border-radius: 8px;
+  min-width: 0; /* Prevent flex items from overflowing */
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #ffffff;
+}
+
+.card p {
+  color: #b0b0b0;
+}
+
+.preview-section {
+  align-items: center;
+  padding: 0.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background-color: transparent;
+  border-radius: 0.5rem;
+}
+
+
+/* Styles the container for profile name and title, arranging them vertically */
+.profile-info {
+  flex-direction: column;
+  padding: .5rem;
+  font-family: sans-serif;
+  color: #858585;
+}
+
+.highlight {
+  color: #858585;
+}
+
+h1,
+h2 {
   color: #ffffff;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
