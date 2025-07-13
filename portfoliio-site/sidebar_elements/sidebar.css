@@ -26,7 +26,7 @@
 /* Styles the container for profile name and title, arranging them vertically */
 .profile-info {
   flex-direction: row;
-  
+
 }
 
 /* Styles the profile picture, making it circular and sized appropriately */
@@ -96,6 +96,15 @@
   outline: 1px solid #313131;
   /* Replace border with outline */
   outline-offset: -1px;
+}
+
+.sidebar ul li a:hover {
+  color: #ffffff;
+}
+
+/* Hover effect for sub-links */
+.sidebar .sub-links li a:hover {
+  color: #ffffff;
 }
 
 /* Styles the container for sub-links, adding indentation for hierarchy */
