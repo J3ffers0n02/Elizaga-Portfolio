@@ -7,12 +7,15 @@
     <title>Mark Jefferson Elizaga - Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="sidebar_elements/sidebar.css">
+     <!-- needed for css of project cards -->
+    <link rel="stylesheet" href="project_display/project_card.css">
 </head>
 
 <body>
     <div id="sidebar-container"></div>
     <div class="main-content">
         <div class="centered-container">
+            
 
             <!-- Preview and description -->
             <div class="preview-section">
@@ -27,53 +30,48 @@
             <!-- Recent Projects -->
             <div class="projects-section">
                 <h2>Recent Projects</h2>
-                <div class="recent-projects">
-                    <div class="project-card">
-                        <img src="assets/images/Project1.png" alt="Project 1" class="project-pic">
-                        <div class="project-content">
-                            <h3 class="project-title">DOST-FPRDI Training Activities</h3>
-                            <p class="project-description"> Mapping done by DOST-FPRDI in the Philippines</p>
-                            <span class="project-category"> Mapping</span>
-                        </div>
+                <div class="projects-row">
+                    <div class="project-card" data-title="DOST-FPRDI Training Activities"
+                        data-description="Mapping done by DOST-FPRDI in the Philippines" data-category="Mapping"
+                        data-image="assets/images/Project1.png">
+                        <!-- Project card content will be populated by JavaScript -->
                     </div>
+                    <div class="project-card" data-title="San Cristobal Flood Management System"
+                        data-description="Flood Management System for Brgy. San Cristobal" data-category="System"
+                        data-image="assets/images/Project2.png">
+                        <!-- Project card content will be populated by JavaScript -->
+                    </div>
+                    
+                </div>
 
-                    <div class="project-card">
-                        <img src="assets/images/Project2.png" alt="Project 1" class="project-pic">
-                        <div class="project-content">
-                            <h3 class="project-title">San Cristobal Flood Management System</h3>
-                            <p class="project-description">Flood Management System for Brgy. San Cristobal</p>
-                            <span class="project-category">System</span>
+                <!-- Education Section Projects -->
+                <div class="education-section">
+                    <h2>Education</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <ul>Bachelor of Science in Information Technology<br>Mapua Malayan Colleges Laguna,
+                                2021–2025<br>Focused electives: Mobile Development, Web Development, Internet of
+                                Everything
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <ul>High School Diploma<br>Caritas Don Bosco School, 2017–2021<br>Focused subjects: Computer
+                                Science,
+                                Mathematics</ul>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Education Section Projects -->
-            <div class="education-section">
-                <h2>Education</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <ul>Bachelor of Science in Information Technology<br>Mapua Malayan Colleges Laguna,
-                            2021–2025<br>Focused electives: Mobile Development, Web Development, Internet of Everything
-                        </ul>
-                    </div>
-                    <div class="timeline-item">
-                        <ul>High School Diploma<br>Caritas Don Bosco School, 2017–2021<br>Focused subjects: Computer
-                            Science,
-                            Mathematics</ul>
-                    </div>
+                <!-- Contact Info -->
+                <div class="contact-section">
+                    <h2>Contact Info</h2>
+                    <p>Email: <a href="mailto:mjelizaga13@gmail.com">mjelizaga13@gmail.com</a></p>
+                    <p>GitHub: <a href="https://github.com/J3ffers0n02">J3ffers0n02</a></p>
                 </div>
-            </div>
-
-            <!-- Contact Info -->
-            <div class="contact-section">
-                <h2>Contact Info</h2>
-                <p>Email: <a href="mailto:mjelizaga13@gmail.com">mjelizaga13@gmail.com</a></p>
-                <p>GitHub: <a href="https://github.com/J3ffers0n02">J3ffers0n02</a></p>
             </div>
         </div>
-    </div>
-    <script src="sidebar_elements/sidebar.js"></script>
+        <script src="sidebar_elements/sidebar.js"></script>
+        <script src="project_display/project_card.js"></script>
 </body>
 
 </html>

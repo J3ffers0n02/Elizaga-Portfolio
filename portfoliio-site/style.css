@@ -46,42 +46,6 @@ body {
 }
 
 
-/* Recent Projects*/
-.recent-projects {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 15px; /* This creates space between cards */
-  padding-bottom: 1.5rem;
-  background-color: transparent;
-  border-radius: 0.5rem;
-}
-
-
-.project-card {
-  background-color: #1C1C1C;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-  flex: 1;
-  max-width: 500px;
-  outline: 1px solid #313131;
-  outline-offset: -1px;
-}
-
-.project-pic {
-  width: 100%;
-  height: 250px;
-  object-fit: fill;
-  display: block;
-}
-
-.project-content {
-  margin-top: -1rem;
-  padding: .5rem;
-}
-
 /* education section Projects*/
 .education-section {
     margin-bottom: 4rem;
