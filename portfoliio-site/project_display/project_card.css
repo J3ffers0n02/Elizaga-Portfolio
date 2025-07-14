@@ -15,29 +15,6 @@
     flex-wrap: nowrap;
     overflow-x: auto;
     gap: 15px;
-    /* Space between cards */
-    padding-bottom: 1rem;
-    scrollbar-width: thin;
-    /* Firefox */
-    scrollbar-color: #ececec #1C1C1C;
-    /* Firefox */
-  }
-
-  .projects-hscroll::-webkit-scrollbar {
-    height: 8px;
-    /* WebKit browsers */
-  }
-
-  .projects-hscroll::-webkit-scrollbar-track {
-    background: #1C1C1C;
-  }
-
-  .projects-hscroll {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 15px;
     padding-bottom: 1rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -72,7 +49,7 @@
   }
 
   .page-projects .project-card {
-    flex: 0 0 300px;
+    flex: 0 0 800px;
     /* Changed from flex: 0.5 to a fixed width (e.g., 300px) for consistency */
     height: auto;
     /* Ensure height adapts to content */
