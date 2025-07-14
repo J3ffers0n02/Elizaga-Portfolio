@@ -4,39 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Mark Jefferson Elizaga</title>
+    <title>Projects | Mark's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="sidebar_elements/sidebar.css">
+    <link rel="stylesheet" href="project_display/project_card.css">
 </head>
 
 <body>
     <div id="sidebar-container"></div>
-    <div class="main-content">
-        <div class="content-container">
-            <h1>Projects</h1>
-            <h2 id="fourth-year">4th Year</h2>
-            <ul>
-                <li>Flood Management App using GIS + Flutter</li>
-                <li>Training Tracker Map App (Supabase)</li>
-            </ul>
-            <h2 id="third-year">3rd Year</h2>
-            <ul>
-                <li>Mobile App UI Clone (Flutter)</li>
-                <li>Database-Driven Web Tool</li>
-            </ul>
-            <h2 id="second-year">2nd Year</h2>
-            <ul>
-                <li>Basic CRUD in PHP + MySQL</li>
-                <li>Simple Calculator in Java</li>
-            </ul>
-            <h2 id="first-year">1st Year</h2>
-            <ul>
-                <li>Personal Blog Static Site</li>
-                <li>HTML + CSS Portfolio v1</li>
-            </ul>
+    <div class="main-content page-projects">
+        <div class="centered-container">
+            <section class="projects-section">
+                <h1>Projects</h1>
+                <div class="projects-hscroll">
+                    <div class="project-card" data-title="DOST-FPRDI Training Activities"
+                        data-description="Mapping done by DOST-FPRDI in the Philippines" data-category="Mapping"
+                        data-image="assets/images/Project1.png">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                    <div class="project-card" data-title="San Cristobal Flood Management System"
+                        data-description="Flood Management System for Brgy. San Cristobal" data-category="System"
+                        data-image="assets/images/Project2.png">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                    <div class="project-card" data-title="San Cristobal Flood Management System"
+                        data-description="Flood Management System for Brgy. San Cristobal" data-category="System"
+                        data-image="assets/images/Project2.png">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
     <script src="sidebar_elements/sidebar.js"></script>
+    <script src="project_display/project_card.js"></script>
 </body>
 
 </html>

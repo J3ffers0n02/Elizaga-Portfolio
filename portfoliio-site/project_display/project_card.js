@@ -1,5 +1,5 @@
 const projectCardTemplate = `
-    <img src="{image}" alt="Image 1" class="project-pic">
+    <img src="{image}" alt="Image Name" class="project-pic">
     <div class="project-content">
         <h3>{title}</h3>
         <p>{description}</p>
