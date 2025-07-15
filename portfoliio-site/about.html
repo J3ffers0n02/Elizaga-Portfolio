@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,48 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="sidebar_elements/sidebar.css">
 </head>
+
 <body>
-    <div id="sidebar-container"></div>
+    <nav class="sidebar">
+        <div class="profile-section">
+            <img src="assets/images/imji.jpg" alt="Profile Picture" class="profile-pic">
+            <div class="profile-info">
+                <h2 class="profile-name">Mark Jefferson <span class="surname">Elizaga</span></h2>
+                <p class="profile-title">Full-Stack Developer</p>
+            </div>
+        </div>
+        <ul>
+            <li><a href="index.html"><span class="icon"></span> Explore</a></li>
+            <li><a href="about.html"><span class="icon"></span> About</a></li>
+            <li>
+                <a href="projects.html"><span class="icon"></span> Projects</a>
+                <ul class="sub-links">
+                    <li><a href="projects.html#4th-year">4th Year</a></li>
+                    <li><a href="projects.html#3rd-year">3rd Year</a></li>
+                    <li><a href="projects.html#2nd-year">2nd Year</a></li>
+                    <li><a href="projects.html#1st-year">1st Year</a></li>
+                </ul>
+            </li>
+            <li><a href="practicum.html"><span class="icon"></span> Practicum</a></li>
+            <li><a href="contact.html"><span class="icon"></span> Contact</a></li>
+        </ul>
+    </nav>
     <div class="main-content">
         <div class="content-container">
             <h1>About Me</h1>
             <p>I’m a developer focused on smart technologies and flood mapping solutions.</p>
         </div>
     </div>
-    <script src="sidebar_elements/sidebar.js"></script>
+    <script>
+        // Highlight active link based on current URL
+        const links = document.querySelectorAll('.sidebar ul li a');
+        links.forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+    
 </body>
+
 </html>

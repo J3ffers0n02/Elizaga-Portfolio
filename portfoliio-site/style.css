@@ -113,7 +113,7 @@ body {
 }
 
 /* Styles the container for profile name and title, arranging them vertically */
-.profile-info {
+.profile-deets {
   flex-direction: column;
   font-family: sans-serif;
   color: #858585;

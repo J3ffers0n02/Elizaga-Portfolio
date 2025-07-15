@@ -1,6 +1,7 @@
 /* Practicum: Styles for the practicum section, including download cards */
 .summary {
-    max-width: 900px; /* Controls line length for summary text */
+    max-width: 900px;
+    /* Controls line length for summary text */
     line-height: 1.6;
 }
 
@@ -10,59 +11,84 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 15px; /* Space between download cards */
+    gap: 20px;
+    /* Space between download cards */
     padding-bottom: 1.5rem;
     background-color: transparent;
     border-radius: 0.5rem;
 }
 
-.download-item {
-    background-color: #1A1A1A; /* Dark background similar to image */
-    border-radius: 12px; /* Rounded corners like the image */
+.dl-item-box {
+    background-color: #1A1A1A;
+    /* Dark background similar to image */
+    border-radius: 12px;
+    /* Rounded corners like the image */
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    outline: 1px solid #313131;
     flex: 1;
     width: 100%;
-    height: 250px;
-    position: relative; /* For absolute positioning of content */
+    height: 280px;
+    position: relative;
+    /* For absolute positioning of content */
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Align content to bottom */
-    padding: 20px; /* Inner padding for content */
+    justify-content: flex-end;
+    /* Align content to bottom */
+    padding: 0 0 20px 18px;
+    /* Inner padding for content */
 }
 
-.download-item h3 {
+.dl-item-box h3 {
     font-family: 'Arial', sans-serif;
     font-weight: bold;
-    font-size: 1rem; /* Larger title like "Projects" */
-    color: #E0E0E0; /* Light gray for title */
-    margin: 0 0 10px 0; /* Space below title */
-    z-index: 1; /* Ensure it’s above other content */
+    font-size: 1.1rem;
+    /* Larger title like "Projects" */
+    color: #E0E0E0;
+    /* Light gray for title */
+    margin: 0 0 0px 0;
+    /* Space below title */
+    z-index: 1;
+    /* Ensure it’s above other content */
 }
 
-.download-item p {
+.dl-item-box p {
     font-family: 'Helvetica', sans-serif;
     font-weight: normal;
-    font-size: 0.8rem; /* Slightly larger for readability */
-    color: #A0A0A0; /* Lighter gray for paragraph */
-    margin: 0 0 20px 0; /* Space below paragraph, above button */
-    z-index: 1; /* Ensure it’s above other content */
+    font-size: 0.8rem;
+    /* Slightly larger for readability */
+    color: #A0A0A0;
+    /* Lighter gray for paragraph */
+    margin: 0 0 20px 0;
+    /* Space below paragraph, above button */
+    z-index: 1;
+    /* Ensure it’s above other content */
 }
 
 .download-button {
     display: inline-block;
     text-decoration: none;
-    background-color: #333333; /* Dark button background */
+    background-color: #333333;
+    /* Dark button background */
     color: #FFFFFF;
-    padding: 12px 24px; /* Larger padding for rectangular shape */
-    border-radius: 8px; /* Rounded corners */
+    padding: 6px 12px;
+    /* Larger padding for rectangular shape */
+    outline: 1px solid #313131;
+    border-radius: 4px;
+    /* Rounded corners */
     font-family: 'Arial', sans-serif;
-    font-size: 1.1rem;
-    position: relative; /* Removed absolute to align naturally at bottom */
-    align-self: flex-start; /* Align button to start */
+    font-weight: normal;
+    font-size: 0.9rem;
+    position: relative;
+    /* Removed absolute to align naturally at bottom */
+    align-self: flex-start;
+    /* Align button to start */
     transition: background-color 0.3s;
+    outline: 1px solid #313131;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
 }
 
 .download-button:hover {
-    background-color: #444444; /* Darker shade on hover */
+    background-color: #444444;
+    /* Darker shade on hover */
 }
