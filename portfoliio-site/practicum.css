@@ -3,6 +3,7 @@
     max-width: 900px;
     /* Controls line length for summary text */
     line-height: 1.6;
+    text-indent: 3rem;
 }
 
 .download-section {
@@ -25,17 +26,58 @@
     /* Rounded corners like the image */
     overflow: hidden;
     outline: 1px solid #313131;
+    outline-offset: -1px;
     flex: 1;
     width: 100%;
-    height: 280px;
+    height: 350px;
     position: relative;
     /* For absolute positioning of content */
     display: flex;
     flex-direction: column;
+}
+
+.practicum-pic1 {
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin-bottom: 1rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: #1A1A1A;
+}
+
+.practicum-image-wrapper {
+    background-color: #1b1b1b;
+    /* Filler background */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-bottom: 1rem;
+    height: 225px;
+    background-color: 1b1b1b;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    overflow: hidden;
+}
+
+
+.practicum-pic2 {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    object-position: top;
+    transform: scale(1.6);
+    display: block;
+    margin-top: 5rem;
+}
+
+.info-box {
+    margin-top: -1rem;
+    padding: 1rem;
     justify-content: flex-end;
     /* Align content to bottom */
-    padding: 0 0 20px 18px;
-    /* Inner padding for content */
 }
 
 .dl-item-box h3 {
@@ -45,7 +87,7 @@
     /* Larger title like "Projects" */
     color: #E0E0E0;
     /* Light gray for title */
-    margin: 0 0 0px 0;
+    margin: 0 0 0 0;
     /* Space below title */
     z-index: 1;
     /* Ensure it’s above other content */
