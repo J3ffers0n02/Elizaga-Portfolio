@@ -45,8 +45,7 @@ body {
   /* Match card border radius */
 }
 
-
-/* Recent Projects*/
+/* Recent Projects */
 .recent-projects {
   display: flex;
   flex-direction: row;
@@ -57,9 +56,7 @@ body {
   border-radius: 0.5rem;
 }
 
-
-
-/* education section Projects*/
+/* education section Projects */
 .education-section {
     margin-bottom: 4rem;
     background-color: transparent;
@@ -115,7 +112,6 @@ body {
     color: #ececec;
 }
 
-
 /* Styles the container for profile name and title, arranging them vertically */
 .profile-info {
   flex-direction: column;
@@ -156,3 +152,13 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+p {
+  font-size: 1.10rem;
+}
+
+.practicum-description{
+  font-family: sans-serif;
+  color: #858585;
+}
+

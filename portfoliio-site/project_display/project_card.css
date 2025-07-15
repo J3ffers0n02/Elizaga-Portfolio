@@ -41,18 +41,7 @@
     transition: transform 0.2s;
     outline: 1px solid #313131;
     outline-offset: -1px;
-  }
-
-  .page-home .project-card {
     flex: 1;
-    /* Keeps the 450px width for index.html */
-  }
-
-  .page-projects .project-card {
-    flex: 0 0 800px;
-    /* Changed from flex: 0.5 to a fixed width (e.g., 300px) for consistency */
-    height: auto;
-    /* Ensure height adapts to content */
   }
 
   .project-pic {
