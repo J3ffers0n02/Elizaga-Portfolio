@@ -54,7 +54,7 @@
   }
 
   .page-projects .project-pic {
-    height: auto;
+    height: 225px;
     /* Remove fixed height for projects.html */
     object-fit: cover;
     /* Maintain aspect ratio */
@@ -68,3 +68,27 @@
   .project-card:hover {
     transform: translateY(-5px);
   }
+
+  .project-image-wrapper {
+    background-color: #1b1b1b;
+    /* Filler background */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-bottom: 1rem;
+    height: 225px;
+    background-color: 1b1b1b;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    overflow: hidden;
+}
+
+.project-pic2 {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    object-position: top;
+    transform: scale(1.6);
+    display: block;
+    margin-top: 5rem;
+}
