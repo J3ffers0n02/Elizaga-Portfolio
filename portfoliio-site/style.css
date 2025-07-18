@@ -119,8 +119,12 @@ body {
   color: #858585;
 }
 
-.highlight {
+.highlight-grey {
   color: #858585;
+}
+
+.highlight-white {
+  color: #ffffff;
 }
 
 h1,

@@ -1,15 +1,15 @@
-  .projects-row {
+
+.projects-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 15px;
-    /* This creates space between cards */
     padding-bottom: 1.5rem;
     background-color: transparent;
     border-radius: 0.5rem;
-  }
+}
 
-  .projects-hscroll {
+.projects-hscroll {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -18,22 +18,22 @@
     padding-bottom: 1rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
-  }
+}
 
-  .projects-hscroll::-webkit-scrollbar {
+.projects-hscroll::-webkit-scrollbar {
     display: none;
-  }
+}
 
-  .projects-hscroll::-webkit-scrollbar-track {
+.projects-hscroll::-webkit-scrollbar-track {
     background: #1C1C1C;
-  }
+}
 
-  .projects-hscroll::-webkit-scrollbar-thumb {
+.projects-hscroll::-webkit-scrollbar-thumb {
     background: #ececec;
     border-radius: 4px;
-  }
+}
 
-  .project-card {
+.project-card {
     background-color: #1C1C1C;
     border-radius: 9px;
     overflow: hidden;
@@ -42,41 +42,36 @@
     outline: 1px solid #313131;
     outline-offset: -1px;
     flex: 1;
-  }
+    cursor: pointer;
+}
 
-  .project-pic {
+.project-pic {
     width: 100%;
     height: 250px;
-    /* Keep for index.html */
     object-fit: fill;
-    /* Keep for index.html */
     display: block;
-  }
+}
 
-  .page-projects .project-pic {
+.page-projects .project-pic {
     height: 225px;
-    /* Remove fixed height for projects.html */
     object-fit: cover;
-    /* Maintain aspect ratio */
-  }
+}
 
-  .project-content {
+.project-content {
     margin-top: -1rem;
     padding: .5rem;
-  }
+}
 
-  .project-card:hover {
+.project-card:hover {
     transform: translateY(-5px);
-  }
+}
 
-  .project-image-wrapper {
+.project-image-wrapper {
     background-color: #1b1b1b;
-    /* Filler background */
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     margin-bottom: 1rem;
     height: 225px;
-    background-color: 1b1b1b;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -91,4 +86,63 @@
     transform: scale(1.6);
     display: block;
     margin-top: 5rem;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #1C1C1C;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 1rem;
+}
+
+.modal-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.modal-details {
+    padding: 1rem;
+    color: #ececec;
+}
+
+.modal-details h3 {
+    margin: 0.5rem 0;
+    color: #ffffff;
+}
+
+.modal-details p {
+    margin: 0.5rem 0;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #ececec;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: #ffffff;
 }

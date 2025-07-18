@@ -1,0 +1,74 @@
+.summary {
+    max-width: 900px;
+    /* Controls line length for summary text */
+    line-height: 1.6;
+    text-indent: 3rem;
+}
+
+
+.description-web{
+    max-width: 700px;
+    /* Controls line length for summary text */
+    line-height: 1.6;
+    margin: 0 auto;
+    /* Centers the image */
+    text-indent: 2rem;
+    text-align: justify;
+    color: #858585
+}
+
+.description-mob{
+    max-width: 500px;
+    /* Controls line length for summary text */
+    line-height: 1.6;
+    margin: 0 auto;
+    /* Centers the image */
+    text-indent: 1.5rem;
+    text-align: justify;
+    color: #858585
+}
+
+.capstone-pic {
+    display: block;
+    margin: 0 auto;
+    /* Centers the image */
+    max-width: 70%;
+    /* Keeps it responsive */
+    height: auto;
+    /* Maintains original aspect ratio */
+    border-radius: 8px;
+    background-color: #1A1A1A;
+    margin-top: 3rem;
+    margin-bottom: 1.75rem;
+}
+
+.capstone-pic-mob {
+    display: block;
+    margin: 0 auto;
+    /* Centers the image */
+    max-width: 25%;
+    /* Keeps it responsive */
+    border-radius: 8px;
+    background-color: #1A1A1A;
+    margin-top: 3rem;
+    margin-bottom: 1.75rem;
+}
+
+.toggle-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1A1A1A;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+    background-color: #333;
+}

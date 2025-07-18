@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Jefferson Elizaga - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="capstone.css">
+    <link rel="stylesheet" href="sidebar_elements/sidebar.css">
+    <script>
+        // Determine the label ahead of time
+        let targetPage = '';
+        let labelText = '';
+        const current = window.location.pathname;
+
+        if (current.includes('capstone_mobile.html')) {
+            targetPage = 'capstone_web.html';
+            labelText = 'Web';
+        } else {
+            targetPage = 'capstone_mobile.html';
+            labelText = 'Mobile';
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="sidebar">
+        <div class="profile-section">
+            <img src="assets/images/imji.jpg" alt="Profile Picture" class="profile-pic">
+            <div class="profile-info">
+                <h2 class="profile-name">Mark Jefferson <span class="surname">Elizaga</span></h2>
+                <p class="profile-title">Full-Stack Developer</p>
+            </div>
+        </div>
+        <ul>
+            <li><a href="index.html"><span class="icon"></span> Explore</a></li>
+            <li><a href="about.html"><span class="icon"></span> About</a></li>
+            <li>
+                <a href="projects.html"><span class="icon"></span> Projects</a>
+                <ul class="sub-links">
+                    <li><a href="projects.html#4th-year">4th Year</a></li>
+                    <li><a href="projects.html#3rd-year">3rd Year</a></li>
+                    <li><a href="projects.html#2nd-year">2nd Year</a></li>
+                    <li><a href="projects.html#1st-year">1st Year</a></li>
+                </ul>
+            </li>
+            <li><a href="capstone_web.html"><span class="icon"></span> Capstone</a></li>
+            <li><a href="practicum.html"><span class="icon"></span> Practicum</a></li>
+            <li><a href="contact.html"><span class="icon"></span> Contact</a></li>
+        </ul>
+    </nav>
+    <button class="toggle-button" onclick="window.location.replace(targetPage)">
+        Switch to <span id="toggleLabelText"></span>
+    </button>
+    <main class="main-content page-home">
+        <div class="centered-container">
+            <h1>Capstone Project</h1>
+            <div class="practicum-description">
+                <p class="summary">
+                    San Cristobal Flood Management System (<span class="highlight-white">SCFMS</span>) is a
+                    multi-platform flood management that supports in
+                    mitigating flood related calamities by facilitating in <span
+                        class="highlight-white">preparedness</span>, <span class="highlight-white">mitigation</span>,
+                    <span class="highlight-white">response</span>, and <span class="highlight-white">recovery</span>
+                    efforts.
+                </p>
+            </div>
+            <!-- Landing page Web-->
+            <!-- Landing page-->
+            <img src="assets/images/scfms1.png" alt="Landing Page" class="capstone-pic">
+            <p class="description-web">I'm a Fresh Grad Full-Stack Developer. I focus on mobile development and web
+                development.I
+                create professional websites and organizational applications</p>
+
+            <!-- Status page-->
+            <img src="assets/images/scfms2.png" alt="Profile Picture" class="capstone-pic">
+            <p class="description-web">I'm a Fresh Grad Full-Stack Developer. I focus on mobile development and web
+                development.I
+                create professional websites and organizational applications</p>
+
+            <!-- Weather page-->
+            <img src="assets/images/scfms3.png" alt="Profile Picture" class="capstone-pic">
+            <p class="description-web">I'm a Fresh Grad Full-Stack Developer. I focus on mobile development and web
+                development.I
+                create professional websites and organizational applications</p>
+
+            <!-- flood map page-->
+            <img src="assets/images/scfms4.png" alt="Profile Picture" class="capstone-pic">
+            <p class="description-web">I'm a Fresh Grad Full-Stack Developer. I focus on mobile development and web
+                development.I
+                create professional websites and organizational applications</p>
+
+            <!-- flood history page-->
+            <img src="assets/images/scfms5.png" alt="Profile Picture" class="capstone-pic">
+            <p class="description-web">I'm a Fresh Grad Full-Stack Developer. I focus on mobile development and web
+                development.I
+                create professional websites and organizational applications</p>
+
+            <!-- batch upload login page-->
+            <img src="assets/images/scfms6.png" alt="Profile Picture" class="capstone-pic">
+            <p class="description-web">I'm a Fresh Grad Full-Stack Developer. I focus on mobile development and web
+                development.I
+                create professional websites and organizational applications</p>
+            <!-- batch upload page-->
+            <img src="assets/images/scfms7.png" alt="Profile Picture" class="capstone-pic">
+            <p class="description-web">I'm a Fresh Grad Full-Stack Developer. I focus on mobile development and web
+                development.I
+                create professional websites and organizational applications</p>
+        <script src="sidebar_elements/sidebar_active.js"></script>
+        <script>
+            document.getElementById('toggleLabelText').textContent = labelText;
+        </script>
+
+
+</body>
+
+</html>
