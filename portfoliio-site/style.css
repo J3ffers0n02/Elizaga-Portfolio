@@ -50,7 +50,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 15px; /* This creates space between cards */
+  gap: 15px;
+  /* This creates space between cards */
   padding-bottom: 1.5rem;
   background-color: transparent;
   border-radius: 0.5rem;
@@ -58,58 +59,58 @@ body {
 
 /* education section Projects */
 .education-section {
-    margin-bottom: 4rem;
-    background-color: transparent;
-    border-radius: 8px;
+  margin-bottom: 4rem;
+  background-color: transparent;
+  border-radius: 8px;
 }
 
 .education-section h2 {
-    color: #ffffff;
-    font-size: 1.25rem;
-    margin-top: 0.2rem;
-    margin-bottom: 1rem;
+  color: #ffffff;
+  font-size: 1.25rem;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
 }
 
 .timeline {
-    position: relative;
-    padding-left: 2rem;
+  position: relative;
+  padding-left: 2rem;
 }
 
 .timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0.5rem;
-    width: 2px;
-    background-color: #ececec;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0.5rem;
+  width: 2px;
+  background-color: #ececec;
 }
 
 .timeline-item {
-    position: relative;
-    padding-left: 2rem;
-    margin-bottom: 2rem;
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
 }
 
 .timeline-item::before {
-    content: '';
-    position: absolute;
-    top: 0.5rem;
-    left: -0.75rem;
-    width: 10px;
-    height: 10px;
-    background-color: #ececec;
-    border-radius: 50%;
+  content: '';
+  position: absolute;
+  top: 0.5rem;
+  left: -0.75rem;
+  width: 10px;
+  height: 10px;
+  background-color: #ececec;
+  border-radius: 50%;
 }
 
 .timeline-item ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-    color: #ececec;
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #ececec;
 }
 
 .timeline-item li {
-    color: #ececec;
+  color: #ececec;
 }
 
 /* Styles the container for profile name and title, arranging them vertically */
@@ -161,8 +162,36 @@ p {
   font-size: 1.10rem;
 }
 
-.practicum-description{
+.practicum-description {
   font-family: sans-serif;
   color: #858585;
 }
 
+/* Bubbles CSS */
+.custom-text {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #2d2d2d;
+  border-radius: 20px;
+  color: #e0e0e0;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow for depth */
+}
+.bubble-deets {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  flex-wrap: wrap;
+  background-color: transparent;
+  margin-left: .25rem;
+  margin-right: .25rem;
+}
+
+/*
+.custom-text::before {
+  content: "💡";
+  /* Replace with SVG or icon if desired 
+  margin-right: 8px;
+}*/
