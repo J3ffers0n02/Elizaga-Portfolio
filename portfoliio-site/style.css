@@ -4,11 +4,16 @@
   font-weight: normal;
   font-style: normal;
 }
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 body {
-  margin: 0;
   font-family: 'StudioSans', sans-serif;
   display: flex;
+  flex-direction: column;
   background-color: #161616;
   color: #ececec;
 }
@@ -29,6 +34,8 @@ body {
   padding: 2rem;
   overflow-y: auto;
   height: fit-content;
+  min-height: 100dvh;
+  grid-template-rows: 1fr auto ;
   /* Remove display: flex and flex-wrap */
   /* Instead, use a block layout to stack sections vertically */
 }
@@ -195,3 +202,19 @@ p {
   /* Replace with SVG or icon if desired 
   margin-right: 8px;
 }*/
+/**/
+.footer {
+    background-color: #1a1a1a;
+    color: #ccc;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.6rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
