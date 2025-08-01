@@ -1,14 +1,13 @@
 const projectCardTemplate = `
-    <img src="{image}" alt="Image Name" class="project-pic">
+    <img src="{image}" alt="{title}" class="project-pic">
     <div class="project-content">
         <h3>{title}</h3>
         {skillsSection}
-        <p>{description}</p>
+        <p>{previewDescription}</p>
         <p class="category">{category}</p>
     </div>
 `;
 
-// Function to load the modal HTML
 function loadModal() {
     fetch('modal.html')
         .then(response => response.text())
@@ -17,12 +16,17 @@ function loadModal() {
 
             document.querySelectorAll('.project-card').forEach(card => {
                 const title = card.getAttribute('data-title');
-                const description = card.getAttribute('data-description');
+                const previewDescription = card.getAttribute('data-preview-description') || 'No preview description provided.';
+                const fullDescriptionsAttr = card.getAttribute('data-image-descriptions') || '';
                 const category = card.getAttribute('data-category');
-                const image = card.getAttribute('data-image') || 'project_display/placeholder.jpg';
-                const skills = card.getAttribute('data-skills') || ''; // No default skills, empty if not provided
+                const imagesAttr = card.getAttribute('data-images') || card.getAttribute('data-image') || 'project_display/placeholder.jpg';
+                const skills = card.getAttribute('data-skills') || '';
 
-                // Generate skills HTML only if skills exist
+                const images = imagesAttr.split(',').map(img => img.trim());
+                const fullDescriptions = fullDescriptionsAttr.split('/').map(d => d.trim());
+                const firstImage = images[0];
+
+                // Generate skills HTML
                 let skillsSection = '';
                 if (skills && skills.trim().length > 0) {
                     const skillsHTML = skills.split(' ').map(skill => `<div class="custom-text">${skill}</div>`).join('');
@@ -31,14 +35,15 @@ function loadModal() {
 
                 // Populate project card
                 let content = projectCardTemplate
-                    .replace('{title}', title)
-                    .replace('{description}', description)
-                    .replace('{category}', category)
-                    .replace('{image}', image)
-                    .replace('{skillsSection}', skillsSection);
+                    .replaceAll('{title}', title)
+                    .replaceAll('{category}', category)
+                    .replaceAll('{image}', firstImage)
+                    .replaceAll('{previewDescription}', previewDescription)
+                    .replaceAll('{skillsSection}', skillsSection);
+
                 card.innerHTML = content;
 
-                // Modal logic (updated to include skills)
+                // Modal logic
                 card.addEventListener('click', () => {
                     const modal = document.getElementById('project-modal');
                     const modalImage = document.getElementById('modal-image');
@@ -47,24 +52,50 @@ function loadModal() {
                     const modalCategory = document.getElementById('modal-category');
                     const modalBubbleDeets = modal.querySelector('.modal-bubble-deets');
 
-                    modalImage.src = image;
-                    modalImage.alt = title;
+                    let currentIndex = 0;
+
+                    function showImage(index) {
+                        modalImage.src = images[index];
+                        modalImage.alt = `${title} (${index + 1})`;
+                        modalDescription.textContent = fullDescriptions[index] || 'No detailed description.';
+                    }
+
                     modalTitle.textContent = title;
-                    modalDescription.textContent = description;
                     modalCategory.textContent = category;
 
-                    // Populate modal with skills only if they exist
                     if (skills && skills.trim().length > 0) {
                         modalBubbleDeets.innerHTML = skills.split(' ').map(skill => `<div class="custom-text">${skill}</div>`).join('');
                     } else {
-                        modalBubbleDeets.innerHTML = ''; // Clear if no skills
+                        modalBubbleDeets.innerHTML = '';
                     }
 
+                    showImage(currentIndex);
                     modal.style.display = 'flex';
+
+                    // Arrows
+                    const leftArrow = document.querySelector('.left-arrow');
+                    const rightArrow = document.querySelector('.right-arrow');
+                    if (images.length <= 1) {
+                        leftArrow.style.display = 'none';
+                        rightArrow.style.display = 'none';
+                    } else {
+                        leftArrow.style.display = 'block';
+                        rightArrow.style.display = 'block';
+                    }
+
+                    leftArrow.onclick = () => {
+                        currentIndex = (currentIndex - 1 + images.length) % images.length;
+                        showImage(currentIndex);
+                    };
+
+                    rightArrow.onclick = () => {
+                        currentIndex = (currentIndex + 1) % images.length;
+                        showImage(currentIndex);
+                    };
                 });
             });
 
-            // Close modal logic remains the same
+            // Close modal
             document.querySelector('.modal-close').addEventListener('click', () => {
                 document.getElementById('project-modal').style.display = 'none';
             });

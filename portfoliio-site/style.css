@@ -4,10 +4,11 @@
   font-weight: normal;
   font-style: normal;
 }
-html{
-    height: 100%;
-    margin: 0;
-    padding: 0;
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -35,7 +36,7 @@ body {
   overflow-y: auto;
   height: fit-content;
   min-height: 100dvh;
-  grid-template-rows: 1fr auto ;
+  grid-template-rows: 1fr auto;
   /* Remove display: flex and flex-wrap */
   /* Instead, use a block layout to stack sections vertically */
 }
@@ -156,14 +157,25 @@ ul {
   padding-left: 1.5rem;
 }
 
-a {
-  color: #5f5f5f;
+.project-link-wrapper {
+  display: block;
+  /* ← Let it stretch fully */
+  width: 100%;
+  /* ← Full width of parent */
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-link-wrapper:focus,
+.project-link-wrapper:active {
+  outline: none;
+}
+
+.project-link-wrapper:hover {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
+
 
 p {
   font-size: 1.10rem;
@@ -184,8 +196,10 @@ p {
   color: #e0e0e0;
   font-size: 15px;
   font-family: Arial, sans-serif;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow for depth */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  /* Adds a subtle shadow for depth */
 }
+
 .bubble-deets {
   display: flex;
   flex-direction: row;
@@ -204,17 +218,17 @@ p {
 }*/
 /**/
 .footer {
-    background-color: #1a1a1a;
-    color: #ccc;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.6rem;
+  background-color: #1a1a1a;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.6rem;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 900px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
 }

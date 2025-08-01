@@ -1,4 +1,3 @@
-
 .projects-row {
     display: flex;
     flex-direction: row;
@@ -43,6 +42,14 @@
     outline-offset: -1px;
     flex: 1;
     cursor: pointer;
+}
+
+.project-card .project-content p {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: normal;
+    font-size: 1.1rem;
+    text-indent: 0.25rem;
+    color: #A0A0A0;
 }
 
 .project-pic {
@@ -113,6 +120,8 @@
     padding: 1rem;
 }
 
+
+
 .modal-image {
     width: 100%;
     max-height: 400px;
@@ -122,7 +131,7 @@
 
 .modal-details {
     padding: 1rem;
-    color: #ececec;
+    color: #A0A0A0;
 }
 
 .modal-details h3 {
@@ -132,17 +141,65 @@
 
 .modal-details p {
     margin: 0.5rem 0;
+    
+}
+
+#modal-description {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: normal;
+    font-size: 1rem;
+    /* Slightly larger for readability */
+    color: #A0A0A0;
+    line-height: 1.5;
+    text-indent: 1rem;
+}
+
+/* Modal Category */
+#modal-category.category {
+    font-size: 0.95rem;
+    color: #8a8a8a;
 }
 
 .modal-close {
     position: absolute;
     top: 10px;
     right: 15px;
-    font-size: 1.5rem;
-    color: #ececec;
+    color: transparent;
     cursor: pointer;
 }
 
-.modal-close:hover {
-    color: #ffffff;
+
+.modal-image-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    border-radius: 50%;
+    padding: 0.4rem 0.6rem;
+    user-select: none;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow {
+    right: 0;
 }
