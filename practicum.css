@@ -1,0 +1,146 @@
+/* Practicum: Styles for the practicum section, including download cards */
+.summary {
+    max-width: 900px;
+    /* Controls line length for summary text */
+    line-height: 1.6;
+    text-indent: 3rem;
+}
+
+.download-section {
+    margin-top: 3rem;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+    /* Space between download cards */
+    padding-bottom: 1.5rem;
+    background-color: transparent;
+    border-radius: 0.5rem;
+}
+
+.dl-item-box {
+    background-color: #1A1A1A;
+    /* Dark background similar to image */
+    border-radius: 12px;
+    /* Rounded corners like the image */
+    overflow: hidden;
+    outline: 1px solid #313131;
+    outline-offset: -1px;
+    flex: 1;
+    width: 100%;
+    height: 350px;
+    position: relative;
+    /* For absolute positioning of content */
+    display: flex;
+    flex-direction: column;
+}
+
+.practicum-pic1 {
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin-bottom: 1rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: #1A1A1A;
+}
+
+.practicum-image-wrapper {
+    background-color: #1b1b1b;
+    /* Filler background */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-bottom: 1rem;
+    height: 225px;
+    background-color: 1b1b1b;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    overflow: hidden;
+}
+
+
+.practicum-pic2 {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    object-position: top;
+    transform: scale(1.6);
+    display: block;
+    margin-top: 5rem;
+}
+
+.info-box {
+    margin-top: -1rem;
+    padding: 1rem;
+    justify-content: flex-end;
+    /* Align content to bottom */
+}
+
+.dl-item-box h3 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    /* Larger title like "Projects" */
+    color: #E0E0E0;
+    /* Light gray for title */
+    margin: 0 0 0 0;
+    /* Space below title */
+    z-index: 1;
+    /* Ensure it’s above other content */
+}
+
+.dl-item-box p {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: normal;
+    font-size: 0.8rem;
+    /* Slightly larger for readability */
+    color: #A0A0A0;
+    /* Lighter gray for paragraph */
+    margin: 0 0 20px 0;
+    /* Space below paragraph, above button */
+    z-index: 1;
+    /* Ensure it’s above other content */
+}
+
+.download-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #333333;
+    /* Dark button background */
+    color: #FFFFFF;
+    padding: 6px 12px;
+    /* Larger padding for rectangular shape */
+    outline: 1px solid #313131;
+    border-radius: 4px;
+    /* Rounded corners */
+    font-family: 'Arial', sans-serif;
+    font-weight: normal;
+    font-size: 0.9rem;
+    position: relative;
+    /* Removed absolute to align naturally at bottom */
+    align-self: flex-start;
+    /* Align button to start */
+    transition: background-color 0.3s;
+    outline: 1px solid #313131;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
+}
+
+.download-button:hover {
+    background-color: #444444;
+    /* Darker shade on hover */
+}
+
+.practicum-proj-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 1.5rem;
+    background-color: transparent;
+    border-radius: 0.5rem;
+}

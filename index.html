@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Jefferson Elizaga - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sidebar_elements/sidebar.css">
+    <!-- needed for css of project cards -->
+    <link rel="stylesheet" href="project_display/project_card.css">
+</head>
+
+<body>
+    <nav class="sidebar">
+        <div class="profile-section">
+            <img src="assets/images/imji.jpg" alt="Profile Picture" class="profile-pic">
+            <div class="profile-info">
+                <h2 class="profile-name">Mark Jefferson <span class="surname">Elizaga</span></h2>
+                <p class="profile-title">Full-Stack Developer</p>
+            </div>
+        </div>
+        <ul>
+            <li><a href="index.html"><span class="icon"></span> Explore</a></li>
+            <li><a href="about.html"><span class="icon"></span> About</a></li>
+            <li>
+                <a href="projects.html"><span class="icon"></span> Projects</a>
+                <ul class="sub-links">
+                    <li><a href="projects.html#4th-year">4th Year</a></li>
+                    <li><a href="projects.html#3rd-year">3rd Year</a></li>
+                    <li><a href="projects.html#2nd-year">2nd Year</a></li>
+                    <li><a href="projects.html#1st-year">1st Year</a></li>
+                </ul>
+            </li>
+            <li><a href="capstone_web.html"><span class="icon"></span> Capstone</a></li>
+            <li><a href="practicum.html"><span class="icon"></span> Practicum</a></li>
+            <li><a href="contact.html"><span class="icon"></span> Contact</a></li>
+        </ul>
+    </nav>
+    <main class="main-content page-home">
+        <div class="centered-container">
+
+
+            <!-- Preview and description -->
+            <div class="preview-section">
+                <div class="profile-deets">
+                    <h1>Hey, I'm Mark, <br> <span class="highlight-grey"> A Full-Stack Developer</span></h1>
+                    <p>Cavite, Philippines</p>
+                    <p>I'm a Fresh Grad Full-Stack Developer. I focus on mobile development and web development.<br>
+                        I
+                        create professional websites and organizational applications</p>
+
+                </div>
+                <div class="bubble-deets">
+                    <div class="custom-text">Flutter</div>
+                    <div class="custom-text">HTML</div>
+                    <div class="custom-text">CSS</div>
+                    <div class="custom-text">C++</div>
+                    <div class="custom-text">MySQL</div>
+                    <div class="custom-text">Php</div>
+                    <div class="custom-text">C#</div>
+
+                </div>
+            </div>
+
+            <!-- Recent Projects -->
+            <div class="projects-section">
+                <h2>Recent Projects</h2>
+                <div class="projects-row">
+                    <a href="practicum.html#dost-fprdi" class="project-link-wrapper">
+                        <div class="project-card" data-title="DOST-FPRDI Training Activities"
+                            data-description="Mapping done by DOST-FPRDI in the Philippines" data-category="Mapping"
+                            data-image="assets/images/map1.png" data-video="assets/videos/tmdss.mp4"
+                            data-skills="Flutter Supabase GoogleMapsAPI GeocodingAPI GeoJSon">
+                            <!-- Project card content will be populated by JavaScript -->
+                        </div>
+                    </a>
+                    <a href="capstone_web.html" class="project-link-wrapper">
+                        <div class="project-card" data-title="San Cristobal Flood Management System"
+                            data-description="Flood Management System for Brgy. San Cristobal" data-category="System"
+                            data-image="assets/images/scfms1.png" data-video="assets/videos/scfms.mp4"
+                            data-skills="Flutter Firebase C++ LiDAR Esp32 GSM Semaphore GoogleMaps">
+                            <!-- Project card content will be populated by JavaScript -->
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Education Section Projects -->
+            <div class="education-section">
+                <h2>Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <ul>Bachelor of Science in Information Technology<br>Mapúa Malayan Colleges Laguna,
+                            2021–2025<br>Focused electives: Mobile Development, Web Development, Internet of
+                            Everything
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <ul>High School Diploma<br>Caritas Don Bosco School, 2017–2021<br>Focused subjects: Computer
+                            Science,
+                            Mathematics</ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-section">
+                <h2>Contact Info</h2>
+                <p>Email: <a href="mailto:mjelizaga13@gmail.com">mjelizaga13@gmail.com</a></p>
+                <p>GitHub: <a href="https://github.com/J3ffers0n02">J3ffers0n02</a></p>
+            </div>
+        </div>
+        <!-- footer.html 
+        <footer class="footer">
+            <div class="footer-content">
+                <p>© 2025 Mark Jefferson Elizaga. All rights reserved.</p>
+                <p>Made with ❤️ by Mark</p>
+            </div>
+        </footer>-->
+        <script src="project_display/project_card.js"></script>
+        <script src="sidebar_elements/sidebar_active.js"></script>
+
+
+</body>
+
+</html>
