@@ -7,6 +7,11 @@
     max-width: 700px;
 }
 
+.about-description h2 {
+    margin: 0 auto 1rem auto;
+    max-width: 700px;
+}
+
 .about-description p {
     font-family: sans-serif;
 }
@@ -20,7 +25,7 @@
 }
 
 .about-section {
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
     background-color: transparent;
     border-radius: 8px;
 }
@@ -29,24 +34,32 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
     padding-bottom: 1.5rem;
     background-color: transparent;
     border-radius: 0.5rem;
 }
 
 .about-card {
-    background-color: #161616;
+    background-color: #1C1C1C;
+    /* Match project-card */
     border-radius: 9px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
-    outline: 2px solid #1d1d1d;
+    outline: 1px solid #313131;
+    /* Match project-card */
     outline-offset: -1px;
     flex: 1;
     cursor: pointer;
     max-width: 300px;
 }
+
+.about-card:hover {
+    transform: translateY(-5px);
+    /* Match project-card hover */
+}
+
 
 .about-content {
     padding: 1rem;
@@ -73,7 +86,7 @@ F
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 30px;
 }
 
 .left-divider {

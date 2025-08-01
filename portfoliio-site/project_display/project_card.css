@@ -78,11 +78,15 @@
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     margin-bottom: 1rem;
-    height: 225px;
+    height: 300px;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     overflow: hidden;
+}
+.project-card.project-mobile .project-pic {
+    transform: scale(0.85); /* Zoom out more for mobile projects */
+    transform-origin: center;
 }
 
 .project-pic2 {
@@ -90,9 +94,30 @@
     width: auto;
     object-fit: cover;
     object-position: top;
-    transform: scale(1.6);
+    transform: scale(.9);
     display: block;
-    margin-top: 5rem;
+}
+
+/* for mobile images */
+.project-image-wrapper3 {
+    background-color: #1b1b1b;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-bottom: 1rem;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.project-pic3 {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(0.95); /* Slight zoom out */
+    display: block;
 }
 
 /* Modal Styles */
